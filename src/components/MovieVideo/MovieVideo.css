@@ -1,0 +1,34 @@
+.movieVideo {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  height: 0;
+  background: #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+.movieVideo--active {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  height: auto;
+}
+
+.movieVideo__player {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.movieVideo__close {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  color: #ffffff;
+}
+
+.movieVideo__close svg {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
