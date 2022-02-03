@@ -6,7 +6,7 @@
 - Redux;
 - SASS (?);
 - Firebase 🔥;
-- Kinopoisk API
+- TMDB API
 
 ## Дизайн
 
