@@ -19,6 +19,7 @@ const MovieDetail = () => {
 
   const handleClose = () => {
     dispatch({ type: 'SHOW_HIDE_DETAILS', payload: false });
+    dispatch({ type: 'CHANGE_MOVIE_DETAILS_ID', payload: null });
     dispatch({ type: 'CHANGE_CURRENT_POSTER_INDEX', payload: null });
     setContent('about');
   };
