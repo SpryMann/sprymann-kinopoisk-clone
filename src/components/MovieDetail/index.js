@@ -31,6 +31,7 @@ const MovieDetail = () => {
   };
 
   useEffect(() => {
+    setContent('about');
     if (show && currentRow.contains(currentDetails.current)) {
       const fetchData = async () => {
         const response = await $host.get(
@@ -59,7 +60,9 @@ const MovieDetail = () => {
       }
       ref={currentDetails}
       style={{
-        background: `linear-gradient(to right, #000000 35%, rgba(0, 0, 0, 0.3) 70%), url(${baseUrl}${data?.backdrop_path})`,
+        background: data?.backdrop_path
+          ? `linear-gradient(to right, #000000 35%, rgba(0, 0, 0, 0.3) 70%), url(${baseUrl}${data?.backdrop_path})`
+          : 'linear-gradient(to right, #000000 35%, rgba(0, 0, 0, 0.3) 70%)',
       }}
     >
       <div className="detail__head">

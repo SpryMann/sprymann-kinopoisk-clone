@@ -1,10 +1,9 @@
 .row__detail {
-  display: none;
-  padding: 20px 30px 20px 60px;
+  display: block;
+  padding: 0;
   width: 100%;
   height: 0;
-  background: linear-gradient(to right, #000000 35%, rgba(0, 0, 0, 0.3) 70%),
-    url('https://image.tmdb.org/t/p/original/8yhWlFcJ8zCqjfCvLy3lWFuawR1.jpg');
+  background: linear-gradient(to right, #000000 35%, rgba(0, 0, 0, 0.3) 70%);
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background-position: right !important;
@@ -13,7 +12,7 @@
 }
 
 .row__detail--active {
-  display: block;
+  padding: 20px 30px 20px 60px;
   height: 800px;
 }
 
@@ -83,25 +82,31 @@
 }
 
 .detail__body--top {
-  display: none;
+  min-height: 0;
+  height: 0;
+  overflow: hidden;
   transform: translateY(-100%);
 }
 
 .detail__body--bottom {
-  display: none;
   flex-direction: row;
   align-items: center;
   max-width: 100%;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3) 30%);
+  height: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.3) 30%,
+    transparent
+  );
   transform: translateY(100%);
 }
 
 .detail__body--active {
-  display: flex;
+  min-height: 500px;
+  height: auto;
   transform: translateY(0);
-  transition: all 0.3s ease;
 }
 
 .detail__title {

@@ -1,18 +1,21 @@
 .movieVideo {
   position: fixed;
-  top: 0;
-  z-index: -1;
-  height: 0;
-  background: #1f1f1f;
-  transition: all 0.3s ease;
-}
-
-.movieVideo--active {
+  top: -10%;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 10;
+  display: block;
+  height: 0;
+  background: #1f1f1f;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.movieVideo--active {
+  top: 0;
   height: auto;
+  transition: all 0.5s ease;
 }
 
 .movieVideo__player {
